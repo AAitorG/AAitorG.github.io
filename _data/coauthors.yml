@@ -1,0 +1,4 @@
+# Map BibTeX author last names (lowercase, no accents) to canonical first-name
+# variants and an optional profile URL. Add entries here to turn a co-author's
+# name into a link in the publications list. Left intentionally minimal to avoid
+# unverified links.

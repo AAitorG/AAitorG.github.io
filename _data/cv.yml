@@ -1,0 +1,108 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Aitor González-Marfil
+    - name: Location
+      value: Donostia – San Sebastián, Spain (open to relocate)
+    - name: Email
+      value: aitorgacad@gmail.com
+    - name: Languages
+      value: Spanish (native), Basque, English
+    - name: Focus
+      value: Deep Learning · Computer Vision · Biomedical Imaging
+
+- title: Professional Summary
+  type: list
+  contents:
+    - PhD Candidate in Computer Science & AI specializing in Deep Learning for biomedical imaging.
+    - Experienced in developing high-performance Computer Vision solutions in PyTorch for data-scarce and resource-constrained environments.
+    - Bridge academic research and industry application by integrating ML solutions into real-world technical workflows.
+    - Published in Nature journals (Nature Methods, Nature Machine Intelligence) with 60+ citations.
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: ML Engineer (PhD Research)
+      institution: Donostia International Physics Center (DIPC)
+      year: Mar 2023 - Present
+      description:
+        - Developing PyTorch-based Computer Vision tools for biomedical imaging, specializing in high-performance solutions for data-scarce and resource-constrained environments.
+        - Collaborating with biologists to deploy ML models into production-level research workflows.
+    - title: ML Engineer (Research)
+      institution: University of the Basque Country (UPV/EHU)
+      year: Aug 2021 - Jun 2022
+      description:
+        - Leveraged multitask neural networks to enhance cross-domain generalization of image models for electron microscopy using TensorFlow.
+    - title: Machine Learning Intern
+      institution: DIPC & IXA Research Group
+      year: Jun 2020 - Aug 2021
+      description:
+        - "Biomedical CV: implemented Deep Style Transfer for domain adaptation in electron microscopy."
+        - "NLP: fine-tuned BERT-based Transformers for multilingual NER and POS tasks using PyTorch."
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Computer Science
+      institution: University of the Basque Country (UPV/EHU)
+      year: Exp. 2026
+      description:
+        - Deep learning and computer vision for biomedical imaging in data-scarce settings.
+    - title: M.Sc. Computational Engineering and Intelligent Systems
+      institution: University of the Basque Country (UPV/EHU)
+      year: 2022
+    - title: B.Sc. Computer Science & Artificial Intelligence
+      institution: University of the Basque Country (UPV/EHU)
+      year: 2021
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Programming
+      items:
+        - Python (expert)
+        - Java
+        - C / C++
+    - title: Frameworks
+      items:
+        - PyTorch
+        - TensorFlow
+        - OpenCV
+        - Hugging Face
+    - title: Data & Tools
+      items:
+        - NumPy, Pandas, Scikit-learn
+        - Git, Docker
+        - CNNs, Transformers
+
+- title: Selected Projects
+  type: time_table
+  contents:
+    - title: Light My Cells
+      description:
+        - Developed and deployed Dockerized self-supervised Vision Transformer models for fluorescence prediction from label-free microscopy.
+    - title: 2048 Bot
+      description:
+        - Built a reinforcement learning agent using the NEAT algorithm to play the game 2048.
+    - title: Fake News Detector
+      description:
+        - Deployed an NLP pipeline using BERT for automated news classification.
+
+- title: Publications
+  type: list
+  contents:
+    - Published in <strong>Nature Methods</strong> and <strong>Nature Machine Intelligence</strong> (60+ citations). See the <a href="/publications/">publications page</a> for the full, automatically generated list.
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Machine Learning & Computer Vision
+      items:
+        - Self-supervised learning and Vision Transformers
+        - Segmentation and image-to-image translation
+        - Domain adaptation and generalization
+    - title: Applications
+      items:
+        - Biomedical and microscopy imaging
+        - Deployment-ready, reproducible ML pipelines

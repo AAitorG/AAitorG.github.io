@@ -1,0 +1,23 @@
+"Nat. Methods":
+  url: https://www.nature.com/nmeth/
+  color: "#0a7d5a"
+
+"Nat. Mach. Intell.":
+  url: https://www.nature.com/natmachintell/
+  color: "#b34a00"
+
+"CMPB":
+  url: https://www.sciencedirect.com/journal/computer-methods-and-programs-in-biomedicine
+  color: "#1a5fb4"
+
+"ISBI":
+  url: https://biomedicalimaging.org/
+  color: "#00549f"
+
+"DAACH":
+  url: https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage
+  color: "#6c5b7b"
+
+"bioRxiv":
+  url: https://www.biorxiv.org/
+  color: "#be2634"

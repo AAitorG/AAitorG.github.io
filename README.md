@@ -1,38 +1,45 @@
 # aaitorg.github.io
 
-Personal website & online CV of **Aitor González-Marfil** — PhD Candidate in Computer
-Science & AI working on biomedical computer vision, self-supervised learning, and
-deployment-ready ML pipelines.
+Personal portfolio of **Aitor González-Marfil** — PhD Candidate in Computer Science & AI
+working on biomedical computer vision, self-supervised learning, and deployment-ready ML
+pipelines.
 
 Live site: <https://aaitorg.github.io>
 
+## Stack
+
+- **React** + **Vite** — fast, minimal single-page app
+- **Custom CSS** (no UI framework) inspired by the Brittany Chiang portfolio: dark theme,
+  restrained scroll-based reveal animations, vertical sidebar navigation
+- Deployed to **GitHub Pages** via the GitHub Actions workflow in
+  [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+
 ## Sections
 
-- **About** — professional summary and focus areas.
-- **Publications** — auto-generated from [`_bibliography/papers.bib`](_bibliography/papers.bib)
-  with my name shown in **bold** and links/citation badges for each paper.
-- **Projects** — selected research and personal projects.
-- **CV** — rendered from [`_data/cv.yml`](_data/cv.yml) with a downloadable PDF.
-- **Repositories** — GitHub profile stats.
+- **Hero** — name, role, one-line pitch
+- **About** — short bio and skills
+- **Experience** — selected ML / research roles
+- **Projects** — featured work (Light My Cells, 2048 Bot, Fake News Detector)
+- **Publications** — highlight linking to Google Scholar
+- **Contact** — email CTA
 
 ## Editing
 
-- Content: `_pages/`, `_projects/`, `_data/cv.yml`, `_bibliography/papers.bib`.
-- Identity & settings: `_config.yml`, `_data/socials.yml`.
-- To add a publication, append a BibTeX entry to `_bibliography/papers.bib`; my
-  authorship is bolded automatically via the `scholar.last_name` / `scholar.first_name`
-  matching in `_config.yml`.
+All content lives in [`src/content.js`](src/content.js). Update the strings there to change
+any text, job, project, or link — no component edits required.
+
+## Local development
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+```
 
 ## Build & deploy
 
-Built with [Jekyll](https://jekyllrb.com/) using the
-[al-folio](https://github.com/alshedivat/al-folio) theme and deployed to GitHub Pages by
-the workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every
-push to `main`.
-
-Local preview:
-
 ```bash
-bundle install
-bundle exec jekyll serve
+npm run build    # outputs static site to dist/
 ```
+
+The GitHub Actions workflow builds and publishes `dist/` to GitHub Pages automatically on
+every push to `main`. `.nojekyll` ensures GitHub Pages serves the build as-is.

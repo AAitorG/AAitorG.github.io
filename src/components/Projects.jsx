@@ -12,10 +12,34 @@ export default function Projects() {
       <ul className="projects-grid">
         {projects.items.map((proj, i) => (
           <li className="project" key={proj.name}>
+            {proj.image && (
+              <a
+                href={proj.external || proj.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-image-link"
+              >
+                <div
+                  className="project-image"
+                  style={{
+                    backgroundImage: `url(${proj.image})`,
+                    minHeight: proj.imageHeight ? `${proj.imageHeight}px` : undefined,
+                  }}
+                />
+              </a>
+            )}
             <div className="project-content">
               <div>
                 <p className="project-overline">Featured Project</p>
-                <h3 className="project-title">{proj.name}</h3>
+                <h3 className="project-title">
+                  {proj.external ? (
+                    <a href={proj.external} target="_blank" rel="noopener noreferrer">
+                      {proj.name}
+                    </a>
+                  ) : (
+                    proj.name
+                  )}
+                </h3>
                 <div className="project-description">
                   <p>{proj.description}</p>
                 </div>

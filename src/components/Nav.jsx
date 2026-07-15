@@ -1,6 +1,6 @@
 // Ported from Brittany Chiang's v4 `Nav` component
-// (https://github.com/bchiang7/v4). Top header bar with logo, numbered
-// nav links, and resume button.
+// (https://github.com/bchiang7/v4). Top header bar with hexagon logo,
+// numbered nav links, and contact button.
 
 import { navLinks } from '../config'
 
@@ -8,7 +8,21 @@ export default function Nav() {
   return (
     <header className="nav">
       <a className="nav-logo" href="#top" aria-label="Home">
-        AG
+        <svg viewBox="0 0 42 42" width="42" height="42" fill="none">
+          <polygon points="21,1 40,11 40,31 21,41 2,31 2,11" fill="none" stroke="var(--green)" strokeWidth="2" />
+          <text
+            x="50%"
+            y="52%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            fill="var(--green)"
+            fontSize="18"
+            fontWeight="700"
+            fontFamily="'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace"
+          >
+            A
+          </text>
+        </svg>
       </a>
       <div className="nav-links">
         <ol>
@@ -18,8 +32,8 @@ export default function Nav() {
             </li>
           ))}
         </ol>
-        <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-          Resume
+        <a className="resume-button" href="#contact">
+          Contact
         </a>
       </div>
     </header>

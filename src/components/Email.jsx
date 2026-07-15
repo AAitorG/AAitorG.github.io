@@ -1,6 +1,6 @@
 // Ported from Brittany Chiang's v4 `Email` component
 // (https://github.com/bchiang7/v4). Fixed vertical email link on the
-// RIGHT side of the viewport.
+// RIGHT side of the viewport, with a line below the email.
 
 import { site } from '../config'
 

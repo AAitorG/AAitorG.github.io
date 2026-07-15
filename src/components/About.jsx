@@ -18,6 +18,11 @@ export default function About() {
             ))}
           </ul>
         </div>
+        <div className="about-pic">
+          <div className="wrapper">
+            <img className="img" src={about.imageUrl} alt="Aitor González Marfil" />
+          </div>
+        </div>
       </div>
     </section>
   )

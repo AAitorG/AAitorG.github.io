@@ -24,9 +24,6 @@ export default function Footer() {
           {site.attribution.text}
         </a>
       </div>
-      <div className="footer-built">
-        Built by Aitor González-Marfil · React + Vite
-      </div>
     </footer>
   )
 }

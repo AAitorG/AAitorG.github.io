@@ -43,7 +43,16 @@ export default function Experience() {
             >
               <h3>
                 <span>{job.title}</span>
-                <span className="company"> @ {job.company}</span>
+                <span className="company">
+                  {' @ '}
+                  {job.url ? (
+                    <a href={job.url} target="_blank" rel="noopener noreferrer" className="company-link">
+                      {job.company}
+                    </a>
+                  ) : (
+                    job.company
+                  )}
+                </span>
               </h3>
               <p className="range">{job.range}</p>
               <ul>

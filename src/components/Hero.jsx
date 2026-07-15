@@ -1,17 +1,18 @@
-import { intro } from '../content'
+// Ported from Brittany Chiang's v4 `Hero` component
+// (https://github.com/bchiang7/v4).
+
+import { hero } from '../config'
 
 export default function Hero() {
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-
   return (
     <section className="hero" id="top">
-      <p className="hero-hi">{intro.hi}</p>
-      <h1 className="hero-name">{intro.name}</h1>
-      <h2 className="hero-tagline">{intro.tagline}</h2>
-      <p className="hero-desc">{intro.description}</p>
-      <button className="btn" onClick={() => scrollTo('projects')}>
-        {intro.cta}
-      </button>
+      <h1>{hero.greeting}</h1>
+      <h2 className="big-heading">{hero.name}</h2>
+      <h3 className="big-heading">{hero.tagline}</h3>
+      <p>{hero.description}</p>
+      <a className="btn" href="#projects">
+        Check out my work!
+      </a>
     </section>
   )
 }

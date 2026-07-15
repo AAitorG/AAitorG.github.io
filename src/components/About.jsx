@@ -1,24 +1,23 @@
-import { about } from '../content'
-import { useReveal } from '../hooks/useReveal'
+// Ported from Brittany Chiang's v4 `About` component
+// (https://github.com/bchiang7/v4).
+
+import { about } from '../config'
 
 export default function About() {
-  const [ref, visible] = useReveal()
   return (
-    <section className="section" id="about" ref={ref}>
-      <h2 className={`section-title ${visible ? 'in' : ''}`}>
-        <span className="title-index">01.</span> {about.heading}
-      </h2>
-      <div className={`section-body ${visible ? 'in' : ''}`}>
-        <div className="about-text">
+    <section className="about" id="about">
+      <h2 className="numbered-heading">{about.heading}</h2>
+      <div className="inner">
+        <div>
           {about.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
+          <ul className="skills-list">
+            {about.skills.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
         </div>
-        <ul className="skills">
-          {about.skills.map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ul>
       </div>
     </section>
   )

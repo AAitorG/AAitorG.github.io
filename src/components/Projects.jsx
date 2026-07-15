@@ -1,38 +1,48 @@
-import { projects } from '../content'
-import { useReveal } from '../hooks/useReveal'
+// Ported from Brittany Chiang's v4 `Featured` / `Projects` components
+// (https://github.com/bchiang7/v4). Alternating two-column layout with
+// GitHub/external links and tech tags.
+
+import { projects } from '../config'
+import Icon from './Icon'
 
 export default function Projects() {
-  const [ref, visible] = useReveal()
   return (
-    <section className="section" id="projects" ref={ref}>
-      <h2 className={`section-title ${visible ? 'in' : ''}`}>
-        <span className="title-index">03.</span> {projects.heading}
-      </h2>
-      <div className={`section-body ${visible ? 'in' : ''}`}>
-        <div className="projects-grid">
-          {projects.items.map((proj) => (
-            <article className="project-card" key={proj.name}>
-              <div className="project-top">
-                <span className="project-folder">★</span>
+    <section id="projects">
+      <h2 className="numbered-heading">{projects.heading}</h2>
+      <ul className="projects-grid">
+        {projects.items.map((proj, i) => (
+          <li className="project" key={proj.name}>
+            <div className="project-content">
+              <div>
+                <p className="project-overline">Featured Project</p>
+                <h3 className="project-title">{proj.name}</h3>
+                <div className="project-description">
+                  <p>{proj.description}</p>
+                </div>
+                {proj.tags.length > 0 && (
+                  <ul className="project-tech-list">
+                    {proj.tags.map((t) => (
+                      <li key={t}>{t}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="project-links">
-                  {proj.links.map((l) => (
-                    <a key={l.url} href={l.url} target="_blank" rel="noreferrer" aria-label={l.label}>
-                      {l.label}
+                  {proj.github && (
+                    <a href={proj.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Link">
+                      <Icon name="GitHub" />
                     </a>
-                  ))}
+                  )}
+                  {proj.external && (
+                    <a href={proj.external} target="_blank" rel="noopener noreferrer" aria-label="External Link" className="external">
+                      <Icon name="External" />
+                    </a>
+                  )}
                 </div>
               </div>
-              <h3 className="project-name">{proj.name}</h3>
-              <p className="project-desc">{proj.description}</p>
-              <ul className="project-tags">
-                {proj.tags.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

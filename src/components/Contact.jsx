@@ -1,21 +1,17 @@
-import { contact, site } from '../content'
-import { useReveal } from '../hooks/useReveal'
+// Ported from Brittany Chiang's v4 `Contact` component
+// (https://github.com/bchiang7/v4).
+
+import { contact, site } from '../config'
 
 export default function Contact() {
-  const [ref, visible] = useReveal()
   return (
-    <section className="section contact" id="contact" ref={ref}>
-      <h2 className={`section-title center ${visible ? 'in' : ''}`}>
-        <span className="title-index">05.</span> {contact.heading}
-      </h2>
-      <p className={`contact-text ${visible ? 'in' : ''}`}>{contact.text}</p>
-      <a className={`btn ${visible ? 'in' : ''}`} href={`mailto:${site.email}`}>
+    <section className="contact" id="contact">
+      <h2 className="numbered-heading overline">{contact.heading}</h2>
+      <h2 className="title">Get In Touch</h2>
+      <p>{contact.text}</p>
+      <a className="btn" href={`mailto:${site.email}`}>
         {contact.cta}
       </a>
-      <footer className="footer">
-        <p>Designed & built by Aitor González-Marfil.</p>
-        <p>React · Vite</p>
-      </footer>
     </section>
   )
 }

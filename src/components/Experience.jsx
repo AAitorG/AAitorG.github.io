@@ -1,23 +1,54 @@
-import { experience } from '../content'
-import { useReveal } from '../hooks/useReveal'
+// Ported from Brittany Chiang's v4 `Jobs` component
+// (https://github.com/bchiang7/v4). Tabbed interface with company tabs
+// on the left and job details on the right.
+
+import { useState } from 'react'
+import { jobs } from '../config'
 
 export default function Experience() {
-  const [ref, visible] = useReveal()
+  const [activeTab, setActiveTab] = useState(0)
+
   return (
-    <section className="section" id="experience" ref={ref}>
-      <h2 className={`section-title ${visible ? 'in' : ''}`}>
-        <span className="title-index">02.</span> {experience.heading}
-      </h2>
-      <div className={`section-body ${visible ? 'in' : ''}`}>
-        <div className="jobs">
-          {experience.jobs.map((job) => (
-            <div className="job" key={job.title + job.range}>
-              <h3 className="job-title">{job.title}</h3>
-              <p className="job-company">{job.company}</p>
-              <p className="job-range">{job.range}</p>
-              <ul className="job-points">
-                {job.points.map((p, i) => (
-                  <li key={i}>{p}</li>
+    <section className="jobs" id="experience">
+      <h2 className="numbered-heading">{jobs.heading}</h2>
+      <div className="inner">
+        <div className="tab-list" role="tablist" aria-label="Job tabs">
+          {jobs.items.map((job, i) => (
+            <button
+              key={i}
+              className={`tab-btn ${activeTab === i ? 'active' : ''}`}
+              onClick={() => setActiveTab(i)}
+              role="tab"
+              tabIndex={activeTab === i ? '0' : '-1'}
+              aria-selected={activeTab === i}
+              aria-controls={`panel-${i}`}
+              id={`tab-${i}`}
+            >
+              <span>{job.company}</span>
+            </button>
+          ))}
+          <div className="tab-highlight" style={{ '--active-tab': activeTab }} />
+        </div>
+
+        <div className="tab-panels">
+          {jobs.items.map((job, i) => (
+            <div
+              key={i}
+              className="tab-panel"
+              id={`panel-${i}`}
+              role="tabpanel"
+              tabIndex={activeTab === i ? '0' : '-1'}
+              aria-labelledby={`tab-${i}`}
+              hidden={activeTab !== i}
+            >
+              <h3>
+                <span>{job.title}</span>
+                <span className="company"> @ {job.company}</span>
+              </h3>
+              <p className="range">{job.range}</p>
+              <ul>
+                {job.points.map((p, j) => (
+                  <li key={j}>{p}</li>
                 ))}
               </ul>
             </div>

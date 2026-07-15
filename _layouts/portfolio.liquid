@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="portfolio">
+  <section class="portfolio-hero" aria-labelledby="intro-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Machine learning &amp; computer vision</p>
+      <h1 id="intro-title">Aitor González-Marfil</h1>
+      <p class="hero-title">I turn ambitious computer-vision research into reliable, usable ML systems.</p>
+      <p class="hero-summary">PhD candidate in Computer Science &amp; AI, building deep-learning tools for biomedical imaging—from data-scarce experiments to reproducible, Dockerized workflows.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Explore selected work <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="{{ '/assets/pdf/Aitor-Gonzalez-Marfil-CV.pdf' | relative_url }}">Download CV <span aria-hidden="true">↓</span></a>
+      </div>
+      <ul class="hero-meta" aria-label="Professional availability"><li>Donostia–San Sebastián, Spain</li><li>Open to relocation</li><li>Available October 2026</li></ul>
+    </div>
+    <div class="hero-portrait-wrap"><div class="hero-portrait">{% include figure.liquid loading="eager" path="assets/img/aitor-github-avatar.jpg" alt="Aitor González-Marfil" cache_bust=true %}</div><p class="portrait-caption">PhD candidate · applied ML engineer</p></div>
+  </section>
+  <section class="proof-strip" aria-label="Career highlights">
+    <div><strong>Nature Methods</strong><span>published contributor</span></div><div><strong>Nature Machine Intelligence</strong><span>published contributor</span></div><div><strong>60+</strong><span>citations across publications</span></div><div><strong>PyTorch · Docker</strong><span>from research to deployment</span></div>
+  </section>
+  <section class="portfolio-section" id="about"><div class="section-label">01 — Profile</div><div class="section-content profile-intro"><h2>Research depth. Engineering instincts.</h2><div><p>I specialize in deep learning for computer vision, particularly when data is limited, domains shift, or solutions need to run outside a notebook. My work combines self-supervised learning, Vision Transformers, and image analysis with practical software delivery.</p><p>At DIPC and UPV/EHU, I collaborate closely with domain experts to make advanced imaging models useful to the people making scientific decisions with them.</p></div></div></section>
+  <section class="portfolio-section" id="work"><div class="section-label">02 — Selected work</div><div class="section-content"><div class="work-grid">
+    <article class="work-card work-card-featured"><p class="work-kicker">Computer vision · MLOps</p><h2>Light My Cells</h2><p>Self-supervised Vision Transformers that predict fluorescence from label-free microscopy—packaged as a reproducible Docker workflow.</p><ul><li>Built on BiaPy for real research workflows</li><li>Presented at IEEE ISBI 2024</li></ul><a href="{{ '/projects/#research' | relative_url }}">Read the project <span aria-hidden="true">→</span></a></article>
+    <article class="work-card"><p class="work-kicker">Foundation models · Bioimage analysis</p><h2>DINOSim</h2><p>Zero-shot object detection and semantic segmentation on microscopy images using self-supervised DINO features—without task-specific training.</p><a href="{{ '/publications/' | relative_url }}">View publication <span aria-hidden="true">→</span></a></article>
+    <article class="work-card"><p class="work-kicker">Deep learning · Open source</p><h2>BiaPy</h2><p>Contributed to an accessible deep-learning framework for bioimage analysis, featured in <em>Nature Methods</em>.</p><a href="{{ '/publications/' | relative_url }}">View publication <span aria-hidden="true">→</span></a></article>
+  </div></div></section>
+  <section class="portfolio-section" id="expertise"><div class="section-label">03 — Expertise</div><div class="section-content capability-grid"><div><h3>ML systems</h3><p>PyTorch, TensorFlow, Docker, Git, reproducible pipelines, model evaluation.</p></div><div><h3>Computer vision</h3><p>Self-supervised learning, Vision Transformers, segmentation, image-to-image translation, domain adaptation.</p></div><div><h3>Applied collaboration</h3><p>Translating research questions into robust tools alongside biologists and technical teams.</p></div></div></section>
+  <section class="portfolio-section" id="experience"><div class="section-label">04 — Experience</div><div class="section-content timeline">
+    <article><p>2023 — present</p><div><h3>ML Engineer · PhD Research</h3><h4>Donostia International Physics Center (DIPC)</h4><p>Developing high-performance CV tools for biomedical imaging and supporting their use in real research workflows.</p></div></article>
+    <article><p>2021 — 2022</p><div><h3>ML Engineer · Research</h3><h4>University of the Basque Country (UPV/EHU)</h4><p>Improved cross-domain generalization for electron-microscopy image models using multitask neural networks.</p></div></article>
+    <article><p>2020 — 2021</p><div><h3>Machine Learning Intern</h3><h4>DIPC &amp; IXA Research Group</h4><p>Applied deep style transfer to microscopy and fine-tuned BERT models for multilingual NLP tasks.</p></div></article>
+  </div></section>
+  <section class="portfolio-contact" id="contact"><p class="eyebrow">Let’s talk</p><h2>Looking for an applied ML or computer-vision collaborator?</h2><p>I’m interested in roles where strong research thinking meets product-minded engineering.</p><div class="hero-actions"><a class="button button-primary" href="mailto:aitorgacad@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://www.linkedin.com/in/aitor-g/">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div></section>
+</article>

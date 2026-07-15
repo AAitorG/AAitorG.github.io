@@ -1,10 +1,10 @@
 ---
 layout: page
-title: projects
+title: work
 permalink: /projects/
 description: Selected research and personal projects in computer vision, deep learning, and NLP.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [research, personal]
 horizontal: false
 ---

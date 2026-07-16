@@ -24,7 +24,7 @@ export default function Experience() {
               aria-controls={`panel-${i}`}
               id={`tab-${i}`}
             >
-              <span>{job.company}</span>
+              <span>{job.companyShort}</span>
             </button>
           ))}
           <div className="tab-highlight" style={{ '--active-tab': activeTab }} />

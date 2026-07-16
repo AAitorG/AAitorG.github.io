@@ -4,10 +4,10 @@
 
 export const site = {
   name: 'Aitor González Marfil',
-  role: 'PhD Candidate · Machine Learning Engineer',
+  role: 'Machine Learning Engineer',
   email: 'aitorgacad@gmail.com',
   description:
-    'Aitor González Marfil is a PhD Candidate in Computer Science & AI specializing in deep learning for biomedical imaging.',
+    'Portfolio of Aitor González Marfil, a Machine Learning Engineer and  specialized in biomedical computer vision and deep learning.',
   url: 'https://aaitorg.github.io',
   attribution: {
     text: 'Design inspired by Brittany Chiang',
@@ -32,35 +32,30 @@ export const navLinks = [
 
 export const hero = {
   greeting: 'Hi, my name is',
-  name: 'Aitor González Marfil',
-  tagline: 'I build deep learning systems for biomedical imaging.',
+  name: 'Aitor González Marfil.',
+  tagline: 'I teach computers to see biology.',
   description:
-    "I'm a PhD Candidate in Computer Science & AI specializing in deep learning for biomedical imaging. I develop high-performance computer vision solutions in PyTorch for data-scarce and resource-constrained environments, bridging academic research and industry by integrating ML into real-world technical workflows. Published in Nature journals with 60+ citations.",
+    "I'm a Machine Learning Engineer and PhD Candidate blending computer vision and biomedical imaging. I specialize in building tools that extract meaningful insights from microscopy data.",
 }
 
 export const about = {
   heading: 'About Me',
   imageUrl: new URL('./assets/photo.jpg', import.meta.url).href,
   paragraphs: [
-    "I'm a PhD Candidate in Computer Science & AI specializing in Deep Learning for Biomedical Imaging. I develop high-performance Computer Vision (CV) solutions using PyTorch for data-scarce and resource-constrained environments.",
-    'I bridge academic research and industry application by integrating ML solutions into real-world technical workflows. I collaborate with biologists to deploy models into production-level research pipelines and publish in Nature Methods and Nature Machine Intelligence.',
-    'Beyond research, I enjoy building from first principles — from neuroevolution agents to transformer-based NLP pipelines.',
+    "Hello! I'm Aitor, and I love building machine learning systems. My journey into ML began with a fascination for how computer vision could transform tedious scientific analysis into something faster, more scalable, and more insightful.",
+    "Today, I work closely with biologists to design and deploy tailored AI pipelines. I focus on foundation models and self-supervised learning, developing methods that remain effective when data and computing resources are limited and translating cutting-edge research into practical tools.",
+    "When I'm not writing code, I'm passionate about exploring how AI can make a meaningful difference in real world challenges. I'm proud to have my work featured in venues like Nature Methods and Nature Machine Intelligence.",
+    "Here are a few technologies I’ve been working with recently:",
   ],
   skills: [
     'Python',
     'PyTorch',
-    'TensorFlow',
     'OpenCV',
-    'Hugging Face',
     'Docker',
-    'Computer Vision',
-    'Self-Supervised Learning',
-    'Transformers',
-    'CNNs',
+    'Hugging Face',
+    'Git / MLOps',
     'NumPy / Pandas',
     'Scikit-learn',
-    'Git / MLOps',
-    'Java / C / C++',
   ],
 }
 
@@ -74,8 +69,8 @@ export const jobs = {
       url: 'https://www.dipc.org',
       range: 'Mar 2023 — Present',
       points: [
-        'Developing PyTorch-based Computer Vision tools for biomedical imaging, specializing in high-performance solutions for data-scarce and resource-constrained environments.',
-        'Collaborating with biologists to deploy ML models into production-level research workflows.',
+        'Develop PyTorch vision models for biomedical imaging in resource-constrained environments.',
+        'Deploy ML models into active research pipelines alongside biologists.',
       ],
     },
     {
@@ -85,18 +80,30 @@ export const jobs = {
       url: 'https://www.ehu.eus',
       range: 'Aug 2021 — Jun 2022',
       points: [
-        'Leveraged multitask neural networks to enhance cross-domain generalization of image models for electron microscopy using TensorFlow.',
+        'Developed unsupervised domain adaptation solutions over multiple Electron Microscopy image domains.',
+        'Designed and implemented multitask neural networks to enhance cross-domain generalization, using Python, TensorFlow, Keras, and PyTorch.',
       ],
     },
     {
       title: 'Machine Learning Intern',
-      company: 'DIPC & IXA Research Group',
-      companyShort: 'DIPC & IXA',
+      company: 'Donostia International Physics Center',
+      companyShort: 'DIPC',
       url: 'https://www.dipc.org',
-      range: 'Jun 2020 — Aug 2021',
+      range: 'Jun 2021 — Aug 2021',
       points: [
-        'Biomedical CV: implemented Deep Style Transfer for domain adaptation in electron microscopy.',
-        'NLP: fine-tuned BERT-based Transformers for multilingual NER and POS tasks using PyTorch.',
+        'Applied deep style transfer techniques for unsupervised domain adaptation across multiple Electron Microscopy image domains.',
+        'Utilized Python, TensorFlow, Keras, and PyTorch for complex image processing and data science workflows.',
+      ],
+    },
+    {
+      title: 'NLP Engineer Intern',
+      company: 'IXA Research Group',
+      companyShort: 'IXA',
+      url: 'http://ixa.eus/',
+      range: 'Jun 2020 — Sep 2020',
+      points: [
+        'Fine-tuned transformer-based language models using Python, PyTorch, and Flair for multilingual Named Entity Recognition (NER) and Part-of-Speech (POS) tagging.',
+        'Developed client/server applications in Python to enable remote execution and communication with the deployed NLP models.',
       ],
     },
   ],
@@ -108,7 +115,7 @@ export const projects = {
     {
       name: 'Light My Cells',
       description:
-        'Developed and deployed Dockerized self-supervised Vision Transformer models for fluorescence prediction from label-free microscopy.',
+        'Developed Dockerized self-supervised Vision Transformers for the ISBI challenge to predict four fluorescent organelle channels from label-free microscopy images.',
       tags: ['PyTorch', 'Vision Transformers', 'Docker', 'Biomedical'],
       github: null,
       external: 'https://doi.org/10.1109/ISBI56570.2024.10635818',
@@ -118,7 +125,7 @@ export const projects = {
     {
       name: 'napari-DINOSim',
       description:
-        'Leverages the DINOv2 foundation model for zero-shot object detection and segmentation in bioimage analysis.',
+        'A powerful napari plugin that bridges foundation models and bioimaging, leveraging DINOv2 for training-free semantic segmentation.',
       tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
       github: 'https://github.com/AAitorG/napari-DINOSim',
       external: null,
@@ -128,8 +135,8 @@ export const projects = {
     {
       name: 'ComparaPerfumes',
       description:
-        'A web tool to compare perfume prices across different retailers, helping users find the best deals.',
-      tags: ['Web', 'Price Comparison', 'Perfumes'],
+        'A full-stack price comparison platform that aggregates and analyzes perfume prices across major retailers, helping users find the best deals through a centralized dashboard.',
+      tags: ['Web', 'Data Aggregation'],
       github: null,
       external: 'https://comparaperfumes.com',
       image: new URL('./assets/web_sample.png', import.meta.url).href,
@@ -162,6 +169,6 @@ export const publications = {
 
 export const contact = {
   heading: "What's Next?",
-  text: "I'm currently open to new opportunities and collaborations in applied ML and computer vision. Whether you have a role, a research idea, or just want to say hi — my inbox is always open.",
+  text: "I'm currently looking for new opportunities and collaborations in applied ML and Computer Vision. Whether you have an open role, a research idea, or just want to say hi, my inbox is always open!",
   cta: 'Say hello',
 }

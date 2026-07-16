@@ -20,6 +20,8 @@ export default function Footer() {
         </ul>
       </div>
       <div className="footer-credit">
+        <div className="footer-name">{site.name}</div>
+        <br />
         <a href={site.attribution.url} target="_blank" rel="noopener noreferrer">
           {site.attribution.text}
         </a>

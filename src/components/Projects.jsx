@@ -32,8 +32,8 @@ export default function Projects() {
               <div>
                 <p className="project-overline">Featured Project</p>
                 <h3 className="project-title">
-                  {proj.external ? (
-                    <a href={proj.external} target="_blank" rel="noopener noreferrer">
+                  {proj.external || proj.github ? (
+                    <a href={proj.external || proj.github} target="_blank" rel="noopener noreferrer">
                       {proj.name}
                     </a>
                   ) : (

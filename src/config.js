@@ -96,6 +96,17 @@ export const jobs = {
       ],
     },
     {
+      title: 'Research Intern',
+      company: 'University of Gothenburg',
+      companyShort: 'GU',
+      url: 'https://www.gu.se',
+      range: 'May 2025 — Aug 2025',
+      points: [
+        'Developed self-supervised learning and model-distillation methods for microscopy image representation enhancement in an international lab environment.',
+        'Designed domain-specific distillation techniques for biomedical imaging, achieving a 27× speed-up with 99.4% fewer parameters while improving reconstruction quality across multiple microscopy datasets.',
+      ],
+    },
+    {
       title: 'NLP Engineer Intern',
       company: 'IXA Research Group',
       companyShort: 'IXA',

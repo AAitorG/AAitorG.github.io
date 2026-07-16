@@ -20,7 +20,26 @@ export default function Footer() {
         </ul>
       </div>
       <div className="footer-credit">
-        <div className="footer-name">{site.name}</div>
+        <div className="footer-name-container">
+          <a href="#top" className="footer-logo" aria-label="Back to top">
+            <svg viewBox="0 0 42 42" width="22" height="22" fill="none">
+              <polygon points="21,1 40,11 40,31 21,41 2,31 2,11" fill="none" stroke="var(--green)" strokeWidth="3" />
+              <text
+                x="50%"
+                y="52%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill="var(--green)"
+                fontSize="22"
+                fontWeight="700"
+                fontFamily="var(--font-mono)"
+              >
+                A
+              </text>
+            </svg>
+          </a>
+          <div className="footer-name">{site.name}</div>
+        </div>
         <br />
         <a href={site.attribution.url} target="_blank" rel="noopener noreferrer">
           {site.attribution.text}

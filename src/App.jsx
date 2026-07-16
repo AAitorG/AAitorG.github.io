@@ -15,6 +15,7 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <div id="root">
+      <div id="top"></div>
       <Nav />
       <Social />
       <Email />

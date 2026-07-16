@@ -9,14 +9,14 @@ export default function Nav() {
     <header className="nav">
       <a className="nav-logo" href="#top" aria-label="Home">
         <svg viewBox="0 0 42 42" width="42" height="42" fill="none">
-          <polygon points="21,1 40,11 40,31 21,41 2,31 2,11" fill="none" stroke="var(--green)" strokeWidth="2" />
+          <polygon points="21,1 40,11 40,31 21,41 2,31 2,11" fill="none" stroke="var(--green)" strokeWidth="3" />
           <text
             x="50%"
             y="52%"
             textAnchor="middle"
             dominantBaseline="middle"
             fill="var(--green)"
-            fontSize="18"
+            fontSize="22"
             fontWeight="700"
             fontFamily="'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace"
           >
@@ -32,8 +32,8 @@ export default function Nav() {
             </li>
           ))}
         </ol>
-        <a className="resume-button" href="#contact">
-          Contact
+        <a className="resume-button" href="mailto:aitorgacad@gmail.com">
+          Say Hi 👋
         </a>
       </div>
     </header>

@@ -141,7 +141,7 @@ export const projects = {
     {
       name: 'napari-DINOSim',
       description:
-        'A powerful napari plugin that bridges foundation models and bioimaging, leveraging DINOv2 for training-free semantic segmentation.',
+        'A powerful napari plugin that bridges foundation models and bioimaging, leveraging DINOv2 for training-free semantic segmentation of biomedical images.',
       tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
       github: 'https://github.com/AAitorG/napari-DINOSim',
       external: null,

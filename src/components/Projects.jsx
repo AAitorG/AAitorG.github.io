@@ -17,7 +17,11 @@ export default function Projects() {
       </h2>
       <ul className="projects-grid reveal-stagger" ref={gridRef}>
         {projects.items.map((proj) => (
-          <li className="project" key={proj.name}>
+          <li
+            className={`project${proj.overline === 'Side Project' ? ' project--side' : ''}${proj.imageNudgeX ? ' project--nudge-image' : ''}`}
+            key={proj.name}
+            style={proj.imageNudgeX ? { '--image-nudge': `${proj.imageNudgeX}px` } : undefined}
+          >
             {proj.image && (
               <a
                 href={proj.external || proj.github}
@@ -29,14 +33,16 @@ export default function Projects() {
                   className="project-image"
                   style={{
                     backgroundImage: `url(${proj.image})`,
-                    minHeight: proj.imageHeight ? `${proj.imageHeight}px` : undefined,
+                    ...(proj.imageHeight
+                      ? { minHeight: `${proj.imageHeight}px`, height: `${proj.imageHeight}px` }
+                      : null),
                   }}
                 />
               </a>
             )}
             <div className="project-content">
               <div>
-                <p className="project-overline">Featured Project</p>
+                <p className="project-overline">{proj.overline || 'Featured Project'}</p>
                 <h3 className="project-title">
                   {proj.external || proj.github ? (
                     <a href={proj.external || proj.github} target="_blank" rel="noopener noreferrer">

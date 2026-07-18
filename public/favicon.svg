@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+  <polygon
+    points="21,1 40,11 40,31 21,41 2,31 2,11"
+    fill="none"
+    stroke="#56e6d8"
+    stroke-width="2.5"
+  />
+  <text
+    x="50%"
+    y="53%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="#56e6d8"
+    font-size="20"
+    font-weight="700"
+    font-family="JetBrains Mono, SF Mono, monospace"
+  >A</text>
+</svg>

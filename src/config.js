@@ -7,7 +7,7 @@ export const site = {
   role: 'Machine Learning & Computer Vision Engineer',
   email: 'aitorgacad@gmail.com',
   description:
-    'Portfolio of Aitor González Marfil, a Machine Learning Engineer and  specialized in biomedical computer vision and deep learning.',
+    'Portfolio of Aitor González Marfil, a Machine Learning Engineer specialized in biomedical computer vision and deep learning.',
   url: 'https://aaitorg.github.io',
   attribution: {
     text: 'Design inspired by Brittany Chiang',
@@ -29,6 +29,13 @@ export const navLinks = [
   { name: 'Publications', url: '#publications' },
   { name: 'Contact', url: '#contact' },
 ]
+
+// Primary nav CTA (outlined button). Useful on mobile where the side
+// social rail is hidden.
+export const navCta = {
+  name: 'LinkedIn',
+  url: 'https://www.linkedin.com/in/aitor-g',
+}
 
 export const hero = {
   greeting: 'Hi, my name is',
@@ -69,11 +76,11 @@ export const jobs = {
       url: 'https://www.dipc.org',
       range: 'Mar 2023 — Present',
       points: [
-        'Developed DINOSim, an open-source bioimage analysis method leveraging DINOv2 foundation model embeddings to enable robust, training-free segmentation across complex datasets with minimal annotations.',
-        'Engineered an end-to-end knowledge distillation framework, in collaboration with the University of Gothenburg, to compress large-scale Vision Transformers (ViTs) into highly efficient models tailored for resource-constrained, real-world biomedical workflows.',
-        'Designed and built a full-stack, high-throughput phenotyping software tool to automate structural analysis in microscopy imaging, accelerating dataset processing speeds while preserving critical morphological fidelity.',
-        'Packaged and distributed core ML methods as user-facing software, including a Python-based ecosystem integrated into the scientific workflow tool napari to bridge the gap between complex deep learning models and domain researchers.',
-        'Managed large-scale training pipelines utilizing high-performance computing (HPC) clusters, handling large scale image datasets and data augmentation pipelines in PyTorch.',
+        'Developed DINOSim, an open-source bioimage analysis method using DINOv2 embeddings for robust, training-free segmentation with minimal annotations.',
+        'Engineered a knowledge-distillation framework (with University of Gothenburg) that compresses large Vision Transformers for resource-constrained biomedical workflows.',
+        'Designed high-throughput phenotyping software to automate structural analysis in microscopy while preserving morphological fidelity.',
+        'Shipped ML methods as user-facing tools, including a napari plugin that bridges deep learning models and domain researchers.',
+        'Managed large-scale PyTorch training pipelines on HPC clusters across high-volume image datasets.',
       ],
     },
     {
@@ -83,8 +90,8 @@ export const jobs = {
       url: 'https://www.gu.se',
       range: 'May 2025 — Aug 2025',
       points: [
-        'Developed self-supervised learning and model-distillation methods for microscopy image representation enhancement in an international lab environment.',
-        'Designed domain-specific distillation techniques for biomedical imaging, achieving a 27× speed-up with 99.4% fewer parameters while improving reconstruction quality across multiple microscopy datasets.',
+        'Developed self-supervised learning and model-distillation methods for microscopy image representation.',
+        'Designed domain-specific distillation achieving a 27× speed-up with 99.4% fewer parameters while improving reconstruction quality.',
       ],
     },
     {
@@ -94,9 +101,9 @@ export const jobs = {
       url: 'https://www.ehu.eus',
       range: 'Aug 2021 — Jun 2022',
       points: [
-        'Developed unsupervised domain adaptation solutions over multiple Electron Microscopy image domains.',
-        'Designed and implemented multitask neural networks to enhance cross-domain generalization, using Python, TensorFlow, Keras, and PyTorch.',
-        'Result: developed a method to prevent model collapse on unlabeled target domains.',
+        'Built unsupervised domain-adaptation solutions across multiple electron microscopy image domains.',
+        'Designed multitask networks (Python, TensorFlow/Keras, PyTorch) to improve cross-domain generalization.',
+        'Result: a method that prevents model collapse on unlabeled target domains.',
       ],
     },
     {
@@ -106,9 +113,9 @@ export const jobs = {
       url: 'https://www.dipc.org',
       range: 'Jun 2021 — Aug 2021',
       points: [
-        'Applied deep style transfer techniques for unsupervised domain adaptation across multiple Electron Microscopy image domains.',
-        'Utilized Python, TensorFlow, Keras, and PyTorch for complex image processing and data science workflows.',
-        'Result: improved cross-domain generalization on held-out electron microscopy benchmarks compared to single-task baselines.',
+        'Applied deep style transfer for unsupervised domain adaptation across electron microscopy domains.',
+        'Built image processing and data-science workflows in Python, TensorFlow, Keras, and PyTorch.',
+        'Result: improved cross-domain generalization on held-out EM benchmarks vs single-task baselines.',
       ],
     },
     {
@@ -118,8 +125,8 @@ export const jobs = {
       url: 'http://ixa.eus/',
       range: 'Jun 2020 — Sep 2020',
       points: [
-        'Fine-tuned transformer-based language models using Python, PyTorch, and Flair for multiple underrepresented languages across Named Entity Recognition (NER) and Part-of-Speech (POS) tagging.',
-        'Developed client/server applications in Python to enable remote execution and communication with the deployed NLP models.',
+        'Fine-tuned transformer language models (PyTorch, Flair) for NER and POS tagging in underrepresented languages.',
+        'Built Python client/server comunication protocols for remote execution of the deployed NLP models.',
       ],
     },
   ],
@@ -130,33 +137,35 @@ export const projects = {
   items: [
     {
       name: 'Light My Cells',
+      overline: 'Featured Project',
       description:
         'Developed Dockerized self-supervised Vision Transformers for the ISBI challenge to predict four fluorescent organelle channels from label-free microscopy images.',
       tags: ['PyTorch', 'Vision Transformers', 'Docker', 'Biomedical'],
       github: null,
       external: 'https://doi.org/10.1109/ISBI56570.2024.10635818',
       image: new URL('./assets/lightmycell.png', import.meta.url).href,
-      imageHeight: 250,
     },
     {
       name: 'napari-DINOSim',
+      overline: 'Featured Project',
       description:
         'A powerful napari plugin that bridges foundation models and bioimaging, leveraging DINOv2 for training-free semantic segmentation of biomedical images.',
       tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
       github: 'https://github.com/AAitorG/napari-DINOSim',
       external: null,
       image: new URL('./assets/DINOSim-simplest.png', import.meta.url).href,
-      imageHeight: 140,
+      imageHeight: 170,
+      imageNudgeX: 48,
     },
     {
       name: 'ComparaPerfumes',
+      overline: 'Side Project',
       description:
         'A full-stack price comparison platform that aggregates and analyzes perfume prices across major retailers, helping users find the best deals through a centralized dashboard.',
       tags: ['Web', 'Data Aggregation'],
       github: null,
       external: 'https://comparaperfumes.com',
       image: new URL('./assets/web_sample.png', import.meta.url).href,
-      imageHeight: 250,
     },
   ],
 }

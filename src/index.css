@@ -85,7 +85,7 @@ main {
 
 section {
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 130px 0;
   max-width: 1000px;
 }
 
@@ -115,7 +115,7 @@ h6 {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 10px 0 40px;
+  margin: 10px 0 20px;
   width: 100%;
   font-size: clamp(22px, 4vw, var(--fz-heading));
   white-space: nowrap;
@@ -390,9 +390,9 @@ p:last-of-type {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
-  height: 100vh;
-  padding: 0;
+  min-height: calc(100vh - 180px);
+  height: auto;
+  padding: 40px 0 0;
 }
 
 .hero h1 {
@@ -420,6 +420,10 @@ p:last-of-type {
 }
 
 /* ---- About ---- */
+#about {
+  padding-top: 0;
+}
+
 .about .inner {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -811,7 +815,8 @@ p:last-of-type {
 .contact {
   max-width: 600px;
   margin: 0 auto 0;
-  padding-bottom: 60px;
+  padding-top: 110px;
+  padding-bottom: 85px;
   text-align: center;
 }
 
@@ -908,10 +913,10 @@ p:last-of-type {
     padding: 150px 50px;
   }
   section {
-    padding: 70px 0;
+    padding: 90px 0;
   }
   .contact {
-    padding-bottom: 60px;
+    padding: 110px 0 90px;
   }
   .nav {
     padding: 0 25px;
@@ -1017,7 +1022,7 @@ p:last-of-type {
     padding: 125px 25px;
   }
   section {
-    padding: 60px 0;
+    padding: 80px 0;
   }
   .numbered-heading:after {
     margin-left: 10px;

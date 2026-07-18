@@ -115,7 +115,7 @@ export const jobs = {
       points: [
         'Applied deep style transfer for unsupervised domain adaptation across electron microscopy domains.',
         'Built image processing and data-science workflows in Python, TensorFlow, Keras, and PyTorch.',
-        'Result: improved cross-domain generalization on held-out EM benchmarks vs single-task baselines.',
+        'Result: improved cross-domain generalization on held-out electron microscopy benchmarks vs single-task baselines.',
       ],
     },
     {
@@ -125,8 +125,8 @@ export const jobs = {
       url: 'http://ixa.eus/',
       range: 'Jun 2020 — Sep 2020',
       points: [
-        'Fine-tuned transformer language models (PyTorch, Flair) for NER and POS tagging in underrepresented languages.',
-        'Built Python client/server comunication protocols for remote execution of the deployed NLP models.',
+        'Fine-tuned large language models (PyTorch, Flair) for NER and POS tagging in underrepresented languages.',
+        'Built Python client/server communication protocols for remote execution of the deployed LLMs.',
       ],
     },
   ],

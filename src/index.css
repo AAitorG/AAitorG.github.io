@@ -49,6 +49,105 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ---- Motion primitives ---- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.5s var(--easing) forwards;
+}
+
+.fade-down {
+  opacity: 0;
+  animation: fadeDown 0.4s var(--easing) forwards;
+}
+
+.nav-enter {
+  opacity: 0;
+  animation: fadeIn 0.4s var(--easing) forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-stagger .project {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
+}
+
+.reveal-stagger.is-visible .project {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-stagger.is-visible .project:nth-child(1) {
+  transition-delay: 0ms;
+}
+.reveal-stagger.is-visible .project:nth-child(2) {
+  transition-delay: 100ms;
+}
+.reveal-stagger.is-visible .project:nth-child(3) {
+  transition-delay: 200ms;
+}
+.reveal-stagger.is-visible .project:nth-child(4) {
+  transition-delay: 300ms;
+}
+.reveal-stagger.is-visible .project:nth-child(5) {
+  transition-delay: 400ms;
+}
+.reveal-stagger.is-visible .project:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+#publications.reveal .pub-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.45s var(--easing), transform 0.45s var(--easing);
+}
+
+#publications.reveal.is-visible .pub-item {
+  opacity: 1;
+  transform: none;
+}
+
 ::selection {
   background-color: var(--lightest-navy);
   color: var(--lightest-slate);
@@ -222,7 +321,19 @@ p:last-of-type {
   background-color: rgba(10, 25, 47, 0.85);
   border-bottom: 1px solid var(--lightest-navy);
   backdrop-filter: blur(10px);
-  transition: var(--transition);
+  transition: transform 0.25s var(--easing), height 0.25s var(--easing), box-shadow 0.25s var(--easing),
+    background-color 0.25s var(--easing);
+}
+
+.nav.nav--scrolled {
+  height: var(--nav-scroll-height);
+  background-color: rgba(10, 25, 47, 0.95);
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+}
+
+.nav.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-scroll-height)));
+  box-shadow: none;
 }
 
 .nav-logo {
@@ -316,6 +427,11 @@ p:last-of-type {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.side.side-enter {
+  opacity: 0;
+  animation: fadeIn 0.45s var(--easing) 0.8s forwards;
 }
 
 .side-left {
@@ -578,9 +694,15 @@ p:last-of-type {
 }
 
 .tab-panel {
+  display: none;
   width: 100%;
   height: auto;
   padding: 10px 5px;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: fadeUp 0.35s var(--easing);
 }
 
 .tab-panel ul {
@@ -1026,5 +1148,36 @@ p:last-of-type {
   }
   .numbered-heading:after {
     margin-left: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-up,
+  .fade-down,
+  .nav-enter,
+  .side.side-enter,
+  .tab-panel.active {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal,
+  .reveal.is-visible,
+  .reveal-stagger .project,
+  .reveal-stagger.is-visible .project,
+  #publications.reveal .pub-item,
+  #publications.reveal.is-visible .pub-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .nav.nav--hidden {
+    transform: none;
   }
 }

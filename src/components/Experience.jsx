@@ -4,12 +4,14 @@
 
 import { useState } from 'react'
 import { jobs } from '../config'
+import useReveal from '../hooks/useReveal'
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState(0)
+  const ref = useReveal()
 
   return (
-    <section className="jobs" id="experience">
+    <section className="jobs reveal" id="experience" ref={ref}>
       <h2 className="numbered-heading">{jobs.heading}</h2>
       <div className="inner">
         <div className="tab-list" role="tablist" aria-label="Job tabs">
@@ -34,12 +36,12 @@ export default function Experience() {
           {jobs.items.map((job, i) => (
             <div
               key={i}
-              className="tab-panel"
+              className={`tab-panel${activeTab === i ? ' active' : ''}`}
               id={`panel-${i}`}
               role="tabpanel"
               tabIndex={activeTab === i ? '0' : '-1'}
               aria-labelledby={`tab-${i}`}
-              hidden={activeTab !== i}
+              aria-hidden={activeTab !== i}
             >
               <h3>
                 <span>{job.title}</span>

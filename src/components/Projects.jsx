@@ -3,14 +3,20 @@
 // GitHub/external links and tech tags.
 
 import { projects } from '../config'
+import useReveal from '../hooks/useReveal'
 import Icon from './Icon'
 
 export default function Projects() {
+  const headingRef = useReveal()
+  const gridRef = useReveal()
+
   return (
     <section id="projects">
-      <h2 className="numbered-heading">{projects.heading}</h2>
-      <ul className="projects-grid">
-        {projects.items.map((proj, i) => (
+      <h2 className="numbered-heading reveal" ref={headingRef}>
+        {projects.heading}
+      </h2>
+      <ul className="projects-grid reveal-stagger" ref={gridRef}>
+        {projects.items.map((proj) => (
           <li className="project" key={proj.name}>
             {proj.image && (
               <a

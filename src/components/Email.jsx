@@ -6,7 +6,7 @@ import { site } from '../config'
 
 export default function Email() {
   return (
-    <div className="side side-right">
+    <div className="side side-right side-enter">
       <a className="email-link" href={`mailto:${site.email}`} aria-label="Email me">
         {site.email}
       </a>

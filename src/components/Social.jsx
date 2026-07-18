@@ -7,7 +7,7 @@ import Icon from './Icon'
 
 export default function Social() {
   return (
-    <div className="side side-left">
+    <div className="side side-left side-enter">
       <ul>
         {socialMedia.map(({ name, url }) => (
           <li key={name}>

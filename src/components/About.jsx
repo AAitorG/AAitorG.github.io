@@ -2,10 +2,13 @@
 // (https://github.com/bchiang7/v4).
 
 import { about } from '../config'
+import useReveal from '../hooks/useReveal'
 
 export default function About() {
+  const ref = useReveal()
+
   return (
-    <section className="about" id="about">
+    <section className="about reveal" id="about" ref={ref}>
       <h2 className="numbered-heading">{about.heading}</h2>
       <div className="inner">
         <div>

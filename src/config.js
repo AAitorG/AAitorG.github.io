@@ -78,7 +78,7 @@ export const jobs = {
       points: [
         'Developed DINOSim, an open-source bioimage analysis method using DINOv2 embeddings for robust, training-free segmentation with minimal annotations.',
         'Engineered a knowledge-distillation framework (with University of Gothenburg) that compresses large Vision Transformers for resource-constrained biomedical workflows.',
-        'Designed high-throughput phenotyping software to automate structural analysis in microscopy while preserving morphological fidelity.',
+        'Designed PhenoMe, an open-source phenotyping tool that automates structural analysis of microscopy images using deep learning embeddings and classical image properties.',
         'Shipped ML methods as user-facing tools, including a napari plugin that bridges deep learning models and domain researchers.',
         'Managed large-scale PyTorch training pipelines on HPC clusters across high-volume image datasets.',
       ],
@@ -136,14 +136,14 @@ export const projects = {
   heading: 'Some Things I’ve Built',
   items: [
     {
-      name: 'Light My Cells',
+      name: 'PhenoMe',
       overline: 'Featured Project',
       description:
-        'Developed Dockerized self-supervised Vision Transformers for the ISBI challenge to predict four fluorescent organelle channels from label-free microscopy images.',
-      tags: ['PyTorch', 'Vision Transformers', 'Docker', 'Biomedical'],
-      github: null,
-      external: 'https://doi.org/10.1109/ISBI56570.2024.10635818',
-      image: new URL('./assets/lightmycell.png', import.meta.url).href,
+        'A dataset- and model-agnostic phenotyping tool that combines deep learning embeddings with classical image properties to analyze microscopy datasets.',
+      tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
+      github: 'https://github.com/AAitorG/PhenoMe',
+      external: 'https://AAitorG.github.io/PhenoMe/',
+      image: new URL('./assets/phenome.png', import.meta.url).href,
     },
     {
       name: 'napari-DINOSim',
@@ -154,18 +154,18 @@ export const projects = {
       github: 'https://github.com/AAitorG/napari-DINOSim',
       external: null,
       image: new URL('./assets/DINOSim-simplest.png', import.meta.url).href,
-      imageHeight: 170,
+      imageHeight: 158,
       imageNudgeX: 48,
     },
     {
-      name: 'ComparaPerfumes',
-      overline: 'Side Project',
+      name: 'Light My Cells',
+      overline: 'Featured Project',
       description:
-        'A full-stack price comparison platform that aggregates and analyzes perfume prices across major retailers, helping users find the best deals through a centralized dashboard.',
-      tags: ['Web', 'Data Aggregation'],
+        'Developed Dockerized self-supervised Vision Transformers for the ISBI challenge to predict four fluorescent organelle channels from label-free microscopy images.',
+      tags: ['PyTorch', 'Vision Transformers', 'Docker', 'Biomedical'],
       github: null,
-      external: 'https://comparaperfumes.com',
-      image: new URL('./assets/web_sample.png', import.meta.url).href,
+      external: 'https://doi.org/10.1109/ISBI56570.2024.10635818',
+      image: new URL('./assets/lightmycell.png', import.meta.url).href,
     },
   ],
 }

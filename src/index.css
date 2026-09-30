@@ -892,7 +892,7 @@ p:last-of-type {
 }
 
 .project:nth-of-type(odd) .project-image-link {
-  grid-column: 1 / 6;
+  grid-column: 1 / 7;
 }
 
 .project .project-image {

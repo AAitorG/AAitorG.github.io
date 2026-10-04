@@ -76,9 +76,9 @@ export const jobs = {
       url: 'https://www.dipc.org',
       range: 'Mar 2023 — Present',
       points: [
-        'Developed DINOSim, an open-source bioimage analysis method using DINOv2 embeddings for robust, training-free segmentation with minimal annotations.',
+        'Developed PhenoMe, an open-source phenotyping tool that automates structural analysis of microscopy images using deep learning embeddings and classical image properties.',
         'Engineered a knowledge-distillation framework (with University of Gothenburg) that compresses large Vision Transformers for resource-constrained biomedical workflows.',
-        'Designed PhenoMe, an open-source phenotyping tool that automates structural analysis of microscopy images using deep learning embeddings and classical image properties.',
+        'Developed DINOSim, an open-source bioimage analysis method using DINOv2 embeddings for robust, training-free segmentation with minimal annotations.',
         'Shipped ML methods as user-facing tools, including a napari plugin that bridges deep learning models and domain researchers.',
         'Managed large-scale PyTorch training pipelines on HPC clusters across high-volume image datasets.',
       ],

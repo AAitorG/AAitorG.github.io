@@ -7,7 +7,7 @@ export const site = {
   role: 'Machine Learning & Computer Vision Engineer',
   email: 'aitorgacad@gmail.com',
   description:
-    'Portfolio of Aitor González Marfil, a Machine Learning Engineer specialized in biomedical computer vision and deep learning.',
+    'Portfolio of Aitor González Marfil, a Machine Learning & Computer Vision Engineer specializing in deep learning, Vision Transformers, and self-supervised learning.',
   url: 'https://aaitorg.github.io',
   attribution: {
     text: 'Design inspired by Brittany Chiang',
@@ -42,7 +42,7 @@ export const hero = {
   name: 'Aitor González Marfil.',
   tagline: 'I teach computers to see biology.',
   description:
-    "I'm a Machine Learning Engineer and PhD Candidate blending computer vision and biomedical imaging. I specialize in building tools that extract meaningful insights from microscopy data.",
+    "I'm a Machine Learning & Computer Vision Engineer (PhD Candidate) specializing in deep learning and self-supervised vision models. I build tools that helps scientists analyze and understand complex biological data.",
 }
 
 export const about = {
@@ -50,19 +50,19 @@ export const about = {
   imageUrl: new URL('./assets/photo.jpg', import.meta.url).href,
   paragraphs: [
     "Hello! I'm Aitor, and I love building machine learning systems. My journey into ML began with a fascination for how computer vision could transform tedious scientific analysis into something faster, more scalable, and more insightful.",
-    "Today, I work closely with biologists to design and deploy tailored AI pipelines. I focus on foundation models and self-supervised learning, developing methods that remain effective when data and computing resources are limited and translating cutting-edge research into practical tools.",
-    "When I'm not writing code, I'm passionate about exploring how AI can make a meaningful difference in real world challenges. I'm proud to have my work featured in venues like Nature Methods and Nature Machine Intelligence.",
+    "Today, I design and deploy end-to-end deep learning pipelines for real-world scientific workflows. I focus on building methods that perform reliably under scarce labels and strict compute constraints, and shipping them as open-source tools. I'm proud to have my work published in venues like Nature Methods and Nature Machine Intelligence.",
+    "When I'm not writing code, I'm passionate about exploring how AI can make a meaningful difference in real world challenges.",
     "Here are a few technologies I’ve been working with recently:",
   ],
   skills: [
     'Python',
     'PyTorch',
     'Computer Vision',
-    'Vision Transformers',
-    'DINOv2',
-    'OpenCV',
-    'NumPy / Pandas',
-    'Scikit-learn',
+    'Vision Transformers (ViT)',
+    'Self-Supervised Learning',
+    'Model Distillation',
+    'OpenCV & Scikit-learn',
+    'HPC',
   ],
 }
 
@@ -76,11 +76,11 @@ export const jobs = {
       url: 'https://www.dipc.org',
       range: 'Mar 2023 — Present',
       points: [
-        'Developed PhenoMe, an open-source phenotyping tool that automates structural analysis of microscopy images using deep learning embeddings and classical image properties.',
-        'Engineered a knowledge-distillation framework (with University of Gothenburg) that compresses large Vision Transformers for resource-constrained biomedical workflows.',
+        'Developed PhenoMe, an open-source phenotyping framework that combines foundation-model embeddings with classical computer vision for automated, dataset-agnostic image analysis.',
+        'Engineered a knowledge-distillation framework (with University of Gothenburg) to compress large Vision Transformers into lightweight models for compute-constrained deployment.',
         'Developed DINOSim, an open-source bioimage analysis method using DINOv2 embeddings for robust, training-free segmentation with minimal annotations.',
-        'Shipped ML methods as user-facing tools, including a napari plugin that bridges deep learning models and domain researchers.',
-        'Managed large-scale PyTorch training pipelines on HPC clusters across high-volume image datasets.',
+        'Packaged and shipped deep learning methods as user-facing Python tools and interactive napari plugins, enabling non-technical users to run inference out of the box.',
+        'Built and scaled PyTorch training and data-processing pipelines on HPC clusters across high-volume image datasets.',
       ],
     },
     {
@@ -90,8 +90,8 @@ export const jobs = {
       url: 'https://www.gu.se',
       range: 'May 2025 — Aug 2025',
       points: [
-        'Developed self-supervised learning and model-distillation methods for microscopy image representation.',
-        'Designed domain-specific distillation achieving a 27× speed-up with 99.4% fewer parameters while improving reconstruction quality.',
+        'Developed self-supervised learning and knowledge-distillation methods for image representation.',
+        'Compressed Vision Transformer architectures to achieve a 27x inference speed-up with 99.4% fewer parameters while improving reconstruction quality.',
       ],
     },
     {
@@ -101,9 +101,8 @@ export const jobs = {
       url: 'https://www.ehu.eus',
       range: 'Aug 2021 — Jun 2022',
       points: [
-        'Built unsupervised domain-adaptation solutions across multiple electron microscopy image domains.',
-        'Designed multitask networks (Python, TensorFlow/Keras, PyTorch) to improve cross-domain generalization.',
-        'Result: a method that prevents model collapse on unlabeled target domains.',
+        'Built unsupervised domain-adaptation pipelines across multi-domain electron microscopy volumes to handle severe distribution shifts.',
+        'Designed multi-task neural architectures in PyTorch and TensorFlow/Keras that prevented model collapse on unlabeled target domains and improved cross-domain generalization.',
       ],
     },
     {
@@ -113,9 +112,8 @@ export const jobs = {
       url: 'https://www.dipc.org',
       range: 'Jun 2021 — Aug 2021',
       points: [
-        'Applied deep style transfer for unsupervised domain adaptation across electron microscopy domains.',
-        'Built image processing and data-science workflows in Python, TensorFlow, Keras, and PyTorch.',
-        'Result: improved cross-domain generalization on held-out electron microscopy benchmarks vs single-task baselines.',
+        'Implemented deep style-transfer models for unsupervised domain adaptation across electron microscopy datasets.',
+        'Built end-to-end image processing and evaluation workflows in Python (PyTorch, TensorFlow/Keras), outperforming single-task baselines on held-out cross-domain benchmarks.',
       ],
     },
     {
@@ -125,8 +123,8 @@ export const jobs = {
       url: 'http://ixa.eus/',
       range: 'Jun 2020 — Sep 2020',
       points: [
-        'Fine-tuned large language models (PyTorch, Flair) for NER and POS tagging in underrepresented languages.',
-        'Built Python client/server communication protocols for remote execution of the deployed LLMs.',
+        'Fine-tuned large language models (PyTorch, Flair) for Named Entity Recognition (NER) and Part-of-Speech (POS) tagging in underrepresented languages.',
+        'Engineered Python client-server communication protocols for remote execution of deployed NLP models.',
       ],
     },
   ],
@@ -139,7 +137,7 @@ export const projects = {
       name: 'PhenoMe',
       overline: 'Featured Project',
       description:
-        'A dataset- and model-agnostic phenotyping tool that combines deep learning embeddings with classical image properties to analyze microscopy datasets.',
+        'An open-source, dataset- and model-agnostic phenotyping framework that combines deep learning embeddings with classical computer vision features to analyze large-scale microscopy datasets.',
       tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
       github: 'https://github.com/AAitorG/PhenoMe',
       external: 'https://AAitorG.github.io/PhenoMe/',
@@ -149,8 +147,8 @@ export const projects = {
       name: 'napari-DINOSim',
       overline: 'Featured Project',
       description:
-        'A powerful napari plugin that bridges foundation models and bioimaging, leveraging DINOv2 for training-free semantic segmentation of biomedical images.',
-      tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
+        'An interactive napari plugin bringing foundation models to bioimaging, leveraging DINOv2 for training-free semantic segmentation of biomedical images.',
+      tags: ['Python', 'PyTorch', 'DINOv2', 'Segmentation'],
       github: 'https://github.com/AAitorG/napari-DINOSim',
       external: null,
       image: new URL('./assets/DINOSim-simplest.png', import.meta.url).href,
@@ -161,8 +159,8 @@ export const projects = {
       name: 'Light My Cells',
       overline: 'Featured Project',
       description:
-        'Developed Dockerized self-supervised Vision Transformers for the ISBI challenge to predict four fluorescent organelle channels from label-free microscopy images.',
-      tags: ['PyTorch', 'Vision Transformers', 'Docker', 'Biomedical'],
+        'Dockerized self-supervised Vision Transformers built for the IEEE ISBI challenge to predict four fluorescent organelle channels from label-free microscopy images.',
+      tags: ['PyTorch', 'Vision Transformers', 'Self-Supervised', 'Docker'],
       github: null,
       external: 'https://doi.org/10.1109/ISBI56570.2024.10635818',
       image: new URL('./assets/lightmycell.png', import.meta.url).href,
@@ -194,6 +192,6 @@ export const publications = {
 
 export const contact = {
   heading: "What's Next?",
-  text: "I'm currently looking for new opportunities and collaborations in applied ML and Computer Vision. Whether you have an open role, a research idea, or just want to say hi, my inbox is always open!",
+  text: "I'm currently looking for new opportunities and collaborations in applied ML and Computer Vision. Whether you have an open position, a project in mind, or just want to say hi, my inbox is always open!",
   cta: 'Say hello',
 }

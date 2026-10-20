@@ -52,17 +52,17 @@ export const about = {
     "Hello! I'm Aitor, and I love building machine learning systems. My journey into ML began with a fascination for how computer vision could transform tedious scientific analysis into something faster, more scalable, and more insightful.",
     "Today, I design and deploy end-to-end deep learning pipelines for real-world scientific workflows. I focus on building methods that perform reliably under scarce labels and strict compute constraints, and shipping them as open-source tools. I'm proud to have my work published in venues like Nature Methods and Nature Machine Intelligence.",
     "When I'm not writing code, I'm passionate about exploring how AI can make a meaningful difference in real world challenges.",
-    "Here are a few technologies I’ve been working with recently:",
+    "Here are a few technologies I've been working with recently:",
   ],
   skills: [
     'Python',
     'PyTorch',
+    'Deep Learning',
     'Computer Vision',
-    'Vision Transformers (ViT)',
+    'Vision Transformers',
+    'Foundation Models',
     'Self-Supervised Learning',
-    'Model Distillation',
-    'OpenCV & Scikit-learn',
-    'HPC',
+    'Knowledge Distillation',
   ],
 }
 
@@ -138,7 +138,7 @@ export const projects = {
       overline: 'Featured Project',
       description:
         'An open-source, dataset- and model-agnostic phenotyping framework that combines deep learning embeddings with classical computer vision features to analyze large-scale microscopy datasets.',
-      tags: ['Python', 'PyTorch', 'DINOv2', 'Bioimage'],
+      tags: ['Python', 'Phenotyping', 'Interactive', 'Bioimage'],
       github: 'https://github.com/AAitorG/PhenoMe',
       external: 'https://AAitorG.github.io/PhenoMe/',
       image: new URL('./assets/phenome.png', import.meta.url).href,

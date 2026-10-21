@@ -139,7 +139,7 @@ export const projects = {
       description:
         'An open-source, dataset- and model-agnostic phenotyping framework that combines deep learning embeddings with classical computer vision features to analyze large-scale microscopy datasets.',
       tags: ['Python', 'Phenotyping', 'Interactive', 'Bioimage'],
-      github: 'https://github.com/AAitorG/PhenoMe',
+      github: 'https://github.com/PhenoMe-Ecosystem/PhenoMe',
       external: 'https://AAitorG.github.io/PhenoMe/',
       image: new URL('./assets/phenome.png', import.meta.url).href,
     },
